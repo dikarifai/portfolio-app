@@ -1,5 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 import Image from "next/image";
+import { homeImage } from "../../../public/images";
 // import { IoBookOutline } from "react-icons/io5";
 // import { useSpring, animated } from "@react-spring/web";
 
@@ -19,10 +20,7 @@ const Home = () => {
   // });
   return (
     <>
-      <div
-        className="flex-1 flex justify-center flex-col px-10 items-center max-md:px-0 md-max:relative max-md:z-10"
-        // style={spring}
-      >
+      <div className="flex-1 flex justify-center flex-col px-10 items-center h-screen max-md:px-0 md-max:relative max-md:z-10">
         <div className="max-md:bg-white max-md:bg-opacity-80 max-md:rounded-2xl p-2">
           <h1 className="font-semibold font-serif max-md:text-3xl">
             I am a <br />
@@ -41,13 +39,14 @@ const Home = () => {
         className="flex-1 flex w-full  h-screen justify-end max-md:justify-center max-md:absolute"
         // style={fadeIn}
       >
-        {/* <Image
+        <Image
           className="object-cover"
-          src={homePhoto}
+          priority
+          src={homeImage}
           alt=""
           width={1000}
           height={1000}
-        /> */}
+        />
       </div>
     </>
   );
